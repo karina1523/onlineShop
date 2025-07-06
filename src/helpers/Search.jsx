@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../helpers/search.css';
+import '../helpers/Search.css';
 import { FaTrashAlt } from "react-icons/fa";
 
 const Search = ({ value, onChange, onSearch, cartItems, removeFromCart, updateQuantity }) => {
