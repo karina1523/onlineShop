@@ -1,0 +1,224 @@
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    padding: 2.5rem 3rem;
+    background: #090813;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+//  КАРТОЧКА 
+.catalog__card {
+    background: #0e0e1a;
+    padding: 5px 10px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 18px rgba(49, 63, 202, 0.2);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 25px rgba(49, 63, 202, 0.45);
+    }
+}
+
+// ИЗОБРАЖЕНИЕ
+.imageSlider {
+    width: 100%;
+    height: 200px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+// КОНТРОЛЫ СЛАЙДЕРА 
+.sliderControls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0.8rem;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    font-size: 0.85rem;
+
+    button {
+        background: transparent;
+        border: none;
+        color: #ffffff;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #ffd700;
+        }
+    }
+}
+
+// СОДЕРЖИМОЕ 
+.cardContent {
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.catalog__card_title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 10px;
+     @media (max-width: 800px) {
+        font-size: 15px;
+    }
+}
+
+.catalog__card_description {
+    font-size: 18px;
+    color: #5a66c2;
+    line-height: 1.4;
+    margin-top: 8px;
+     @media (max-width: 800px) {
+        font-size: 16px;
+    }
+     @media (max-width: 500px) {
+        font-size: 13px;
+    }
+}
+
+.catalog__card_stock {
+    font-size: 0.85rem;
+    color: #5a66c2;
+    margin-top: 5px;
+}
+
+// ==== ЦЕНА ====
+.priceBlock {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: 0.3rem;
+}
+
+.catalog__card_price_original {
+    text-decoration: line-through;
+    color: #5a66c2;
+    font-size: 18px;
+    text-align: center;
+     @media (max-width: 500px) {
+        font-size: 15px;
+    }
+}
+
+.catalog__card_price_final {
+    color: #3cf955;
+    font-weight: bold;
+    font-size: 1.1rem;
+     @media (max-width: 800px) {
+        font-size: 17px;
+    }
+     @media (max-width: 500px) {
+        font-size: 14px;
+    }
+}
+
+.catalog__card_price_discount {
+    color: #f92323;
+    border-radius: 8px;
+    font-size: 19px;
+     @media (max-width: 800px) {
+        font-size: 17px;
+    }
+     @media (max-width: 500px) {
+        font-size: 14px;
+    }
+}
+
+// ==== КНОПКА ====
+.catalog__card_button {
+    margin-top: auto;
+    background: linear-gradient(135deg, #313fca, #6c8dff);
+    border: none;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(49, 63, 202, 0.4);
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: linear-gradient(135deg, #6c8dff, #313fca);
+        box-shadow: 0 0 20px rgba(49, 63, 202, 0.6);
+    }
+}
+
+.catalogWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.5rem 0;
+    background: #090813;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 1rem;
+    color: #a6b1ff;
+    font-weight: 500;
+
+    button {
+        background: linear-gradient(135deg, #313fca, #6c8dff);
+        border: none;
+        color: #ffffff;
+        padding: 0.5rem 1.2rem;
+        border-radius: 10px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px rgba(49, 63, 202, 0.3);
+
+        &:hover {
+            background: linear-gradient(135deg, #6c8dff, #313fca);
+            box-shadow: 0 0 18px rgba(49, 63, 202, 0.5);
+        }
+
+        &:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            background: #1c1c2e;
+            box-shadow: none;
+        }
+    }
+
+    span {
+        font-size: 1rem;
+        color: #ffffffcc;
+        font-weight: 400;
+    }
+}

@@ -1,0 +1,53 @@
+.sideBar {
+    background: #0d0d17;
+    color: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(49, 63, 202, 0.2);
+}
+
+.sideBar__title {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #9db4ff;
+}
+
+.sideBar__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.sideBar__menu_item {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+    font-size: 0.95rem;
+
+    &:hover {
+        background-color: rgba(49, 63, 202, 0.2);
+    }
+}
+
+.sortBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sortLabel {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.sortSelect {
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background-color: #151b2f;
+    color: #fff;
+    font-size: 0.9rem;
+    outline: none;
+    box-shadow: 0 0 6px rgba(49, 63, 202, 0.3);
+}

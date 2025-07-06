@@ -1,0 +1,19 @@
+$Inter: ('Regular', 400),
+('Bold', 700);
+$Montserrat: ('Bold', 700);
+
+@each $name,
+$weight in $Inter,
+$Montserrat {
+    @font-face {
+        font-family: 'Inter';
+        src: url('/public/fonts/Inter_18pt-#{name}.ttf');
+        font-weight: $weight;
+    }
+
+    @font-face {
+        font-family: 'Montserrat';
+        src: url('/public/fonts/Montserrat-#{name}.ttf');
+        font-weight: $weight;
+    }
+}

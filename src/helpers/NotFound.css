@@ -1,0 +1,103 @@
+/* Центрирование страницы */
+.notfound-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Контейнер */
+.notfound-container {
+    text-align: center;
+}
+
+/* Кнопка */
+.notfound-button {
+    position: relative;
+    padding: 12px 24px;
+    background-color: #4f46e5;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.notfound-button:hover {
+}
+
+/* Иконка + текст */
+.notfound-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Tooltip Wrapper (для hover) */
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+    color: #e5e7eb;
+    padding: 16px;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.2);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+/* Tooltip triangle */
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #1f2937 transparent transparent transparent;
+}
+
+/* Показываем tooltip при наведении на .tooltip-wrapper */
+.tooltip-wrapper:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Tooltip Header */
+.tooltip-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.tooltip-icon {
+    background-color: rgba(99, 102, 241, 0.2);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tooltip-header h3 {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+}
