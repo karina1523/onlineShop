@@ -26,8 +26,7 @@
     transition: background-color 0.3s ease;
 }
 
-.notfound-button:hover {
-}
+.notfound-button:hover {}
 
 /* Иконка + текст */
 .notfound-icon {
@@ -100,4 +99,55 @@
     font-size: 14px;
     color: white;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .notfound-page {
+        padding: 1rem;
+        height: auto;
+        min-height: 100vh;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .notfound-button {
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+
+    .tooltip {
+        width: 240px;
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    .tooltip-header h3 {
+        font-size: 13px;
+    }
+
+    .tooltip-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tooltip {
+        width: 200px;
+        padding: 10px;
+    }
+
+    .notfound-button {
+        font-size: 12px;
+        padding: 8px 18px;
+    }
+
+    .tooltip-header h3 {
+        font-size: 12px;
+    }
+
+    .tooltip-icon {
+        width: 24px;
+        height: 24px;
+    }
 }

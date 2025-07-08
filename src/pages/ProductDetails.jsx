@@ -82,7 +82,7 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        {/* <div className={s.reviews}>
+        <div className={s.reviews}>
           <h2>Customer Reviews</h2>
           {product.reviews.map((r, i) => (
             <div key={i} className={s.review}>
@@ -94,7 +94,7 @@ const ProductDetails = () => {
               <p className={s.comment}>{r.comment}</p>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </>
   );

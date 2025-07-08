@@ -83,7 +83,8 @@
     @media (max-width: 1100px) {
         font-size: 25px;
     }
-     @media (max-width: 600px) {
+
+    @media (max-width: 600px) {
         font-size: 18px;
     }
 }
@@ -114,7 +115,8 @@
     font-size: 23px;
     font-weight: bold;
     color: #ef4444;
-     @media (max-width: 800px) {
+
+    @media (max-width: 800px) {
         font-size: 18px;
     }
 }
@@ -200,5 +202,91 @@
 
     &:hover {
         background: #334155;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        margin: 30px 0;
+        padding: 0 16px;
+    }
+
+    .card {
+        padding: 24px;
+        gap: 30px;
+        display: flex;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .reviews {
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    .reviews h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .reviewTop {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .backBtn {
+        top: 12px;
+        left: 12px;
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image {
+        height: 220px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .final {
+        font-size: 20px;
+    }
+
+    .discount,
+    .old {
+        font-size: 16px;
+    }
+
+    .controls {
+        font-size: 13px;
+        padding: 4px 10px;
+    }
+
+    .controls_btn {
+        font-size: 16px;
+    }
+
+    .backBtn {
+        font-size: 12px;
+        padding: 6px 10px;
     }
 }

@@ -1,6 +1,6 @@
 .box {
     max-width: 800px;
-    margin: 210px auto;
+    margin: 100px auto;
     padding: 40px;
     background: rgba(0, 0, 0, 0.1);
     border-radius: 20px;
@@ -9,6 +9,15 @@
     text-align: center;
     color: #fff;
     animation: fadeIn 1s ease;
+}
+
+body,
+html,
+#root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -66,5 +75,42 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+body,
+#root {
+    height: 100vh;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .box {
+        margin: 40px 16px;
+        padding: 24px;
+        max-width: 100%;
+        border-radius: 16px;
+        backdrop-filter: blur(4px);
+        box-shadow: 0 6px 16px rgba(21, 87, 192, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column
+    }
+
+    .box__title {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+
+    .box__text1,
+    .box__text2 {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .box__btn {
+        padding: 10px 20px;
+        font-size: 15px;
     }
 }
